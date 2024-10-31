@@ -126,11 +126,11 @@ function M.on_attach(bufnr)
 		-- if settings file does not exist yet, inform user and
 		-- continue with emtpy settings
 		if string.sub(err, 1, 6) == 'ENOENT' then
-			vim.notify(
-				"No existing settings file yet. " ..
-				"Will be generated automatically when file closed.",
-				vim.log.levels.INFO
-			)
+			-- vim.notify(
+			-- 	"No existing settings file yet. " ..
+			-- 	"Will be generated automatically when file closed.",
+			-- 	vim.log.levels.INFO
+			-- )
 		else
 			vim.notify(
 				"Error on attach: " .. vim.inspect(err),
